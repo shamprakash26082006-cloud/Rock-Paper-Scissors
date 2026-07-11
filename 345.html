@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digilab Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Main Layout */
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Left Side */
+
+.left{
+    width:50%;
+    background:white;
+    padding:50px 80px;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+    color:#243b63;
+}
+
+.content{
+    margin-top:140px;
+}
+
+.content h5{
+    color:#66bb6a;
+    letter-spacing:4px;
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+.content h1{
+    font-size:65px;
+    color:#243b63;
+    line-height:75px;
+    margin-bottom:30px;
+}
+
+.content p{
+    color:gray;
+    font-size:20px;
+    line-height:35px;
+    margin-bottom:40px;
+}
+
+button{
+    padding:18px 45px;
+    border:none;
+    border-radius:40px;
+    background:#66bb6a;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4CAF50;
+}
+.d{
+    display: flex;
+    flex-direction: column;
+    margin-top: 800px;
+   
+    width: 20%;
+
+}
+.d i{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+
+    
+}
+
+h2{
+    padding: 8px 16px;
+}
+
+/* Right Side */
+
+.right{
+    width:50%;
+    position:relative;
+}
+
+/* Image */
+
+.right img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Navbar on Image */
+
+nav{
+    position:absolute;
+    top:35px;
+    left:0;
+    width:100%;
+    text-align:center;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav ul li{
+    display:inline-block;
+    margin:0 18px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#222;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:#66bb6a;
+}
+
+.active{
+    color:#66bb6a;
+    border-bottom:2px solid #66bb6a;
+    padding-bottom:5px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left -->
+
+    <div class="left">
+
+        <div class="logo">
+            DIGILAB
+        </div>
+
+        <div class="content">
+
+            <h5>WELCOME TO THE DIGILAB</h5>
+
+            <h1>
+                Small Details Make A Big Impression
+            </h1>
+
+            <p>
+                A small river named Duden flows by their place and
+                supplies it with the necessary regelialia.
+                It is a paradisematic country.
+            </p>
+
+            <button>Get in touch</button>
+
+        </div>
+
+       <nav class="d">
+
+        <h2>    <i class="fa-solid fa-briefcase"></i>  Business Strategy</h2>
+        <h2>   <i class="fa-solid fa-briefcase"></i> research</h2>
+        <h2> <i class="fa-solid fa-briefcase"></i> data analytics</h2>
+        <h2> <i class="fa-solid fa-briefcase"></i> UI design</h2>
+        <h2> <i class="fa-solid fa-briefcase"></i> UX design</h2>
+        <h2> <i class="fa-solid fa-briefcase"></i> technology</h2>
+        <h2> <i class="fa-solid fa-briefcase"></i> creative</h2>
+        </nav>
+
+    </div>
+
+    <!-- Right -->
+
+    <div class="right">
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimony</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200" alt="Office">
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+h1{
+    
+    border-bottom: 2px solid black;
+    background-color: greenyellow;
+}
+
+button{
+    border: none;
+    background-color: greenyellow;
+    font-style: italic;
+    font-size: 50px;
+    border-radius: 20px;
+    padding: 12px 18px;
+
+}
+.button{
+    display: flex;
+    
+justify-content: space-evenly;
+border-bottom: 2px solid black;
+padding-bottom: 200px;
+
+
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+    padding-bottom: 100px;
+}
+.content{
+    font-weight: bold;
+    font-size: 30px;
+}
+h3{
+    font-weight: bold;
+    font-size: 30px;
+}
+.answer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
+    padding-bottom: 54px;
+    
+}
+h4{
+    font-size: 45px;
+    font-weight: bold;
+}
+.a{
+    margin-top: 20px;
+}
+
+
+
+
+</style>
+<body>
+    <div>
+       <center> <h1>Rock Paper Scissors</h1>  </center>
+
+
+       <div class="button">
+         <button  id="rock"  onclick="show()" >Rock</button> 
+         <button id="paper" onclick="data()">Paper</button>
+         <button id="scissors" onclick="of()">Scissors</button>
+
+
+       </div>
+
+       <div class="parent">
+    
+     <div class="content">
+       <h1>YOur choice</h1>
+       <label for="">you</label>
+       <span id="userchoice">--------</span>
+
+
+     </div>
+     <div class="content">
+        <h1>Computer Choice</h1>
+        <label for="">computer</label>
+        <span id="userchoices">--------</span>
+
+
+
+
+     </div>
+
+
+
+     <div class="content">
+        <h1>result</h1>
+        <label for="">winner</label>
+        <span id="winner">--------</span>
+
+
+
+
+
+
+
+     </div>
+
+
+     
+
+
+
+
+
+
+
+       </div>
+
+
+      <center><h3>Scoreboard</h3></center>
+
+
+      <div class="answer">
+
+           <div>
+            <h4>You  :  <span id="userScore">----0----</span></h4><br>
+           
+           </div>
+       <div>
+
+        <h4>Computer : <span id="computerScore">-----0---</span></h4>
+        
+       </div>
+
+
+
+
+      </div>
+
+
+
+      <div class="a">
+       <center> <button onclick="reset()">reset</button>  </center>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let userScore = 0;
+        let computerScore = 0;
+
+        let userchoice = "";
+        let computerChoice = "";
+  function  show(){
+    userchoice = "rock";
+   document.getElementById("userchoice").textContent = userchoice;
+   computerchoice();
+
+  }
+  function data(){
+    userchoice = "paper";
+    document.getElementById("userchoice").textContent = userchoice;
+    computerchoice();
+
+  }
+  function of(){
+    userchoice = "scissors"
+    document.getElementById("userchoice").textContent = userchoice;
+    computerchoice();
+  }
+
+
+ 
+    let choices = ["rock","paper","scissors"];
+
+  function computerchoice(){
+    let randomIndex = Math.floor(Math.random()*3);
+    computerChoice = choices[randomIndex];
+    
+
+    document.getElementById("userchoices").textContent = computerChoice;
+
+    winnerdepends()
+  }
+
+  function winnerdepends(){
+   if(userchoice == computerChoice){
+    document.getElementById("winner").textContent = "draw";
+   }
+
+   else if(
+    userchoice == "rock" && computerChoice == "scissors" || 
+    userchoice == "paper" && computerChoice == "rock" ||
+    userchoice == "scissors" && computerChoice == "paper"
+
+   )
+   {
+    
+    
+     document.getElementById("winner").textContent = "you won";
+     userScore++;
+     document.getElementById("userScore").textContent = userScore;
+   }
+
+   else{
+
+    document.getElementById("winner").textContent = "opponent won"
+    computerScore++;
+    document.getElementById("computerScore").textContent = computerScore;
+   }
+   
+  }
+
+  function reset(){
+    userChoice = "";
+    computerChoice = "";
+    userScore = 0;
+    computerScore = 0;
+
+
+
+     document.getElementById("userchoice").textContent = "--------";
+    document.getElementById("userchoices").textContent = "--------";
+
+    // Reset winner
+    document.getElementById("winner").textContent = "--------";
+
+    // Reset scores
+    document.getElementById("userScore").textContent = userScore;
+    document.getElementById("computerScore").textContent = computerScore;
+  }
+    
+
+
+
+    
+
+
+    </script>
+</body>
+</html>
